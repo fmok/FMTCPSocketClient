@@ -16,6 +16,8 @@
 		84FC26891E6FB98F00FE86A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FC26871E6FB98F00FE86A9 /* LaunchScreen.storyboard */; };
 		84FC26941E6FB98F00FE86A9 /* FMTCPSockectClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC26931E6FB98F00FE86A9 /* FMTCPSockectClientTests.m */; };
 		84FC269F1E6FB98F00FE86A9 /* FMTCPSockectClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC269E1E6FB98F00FE86A9 /* FMTCPSockectClientUITests.m */; };
+		84FC26B11E6FE95800FE86A9 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC26AE1E6FE95800FE86A9 /* AsyncSocket.m */; };
+		84FC26B21E6FE95800FE86A9 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FC26B01E6FE95800FE86A9 /* AsyncUdpSocket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		84FC269A1E6FB98F00FE86A9 /* FMTCPSockectClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMTCPSockectClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FC269E1E6FB98F00FE86A9 /* FMTCPSockectClientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTCPSockectClientUITests.m; sourceTree = "<group>"; };
 		84FC26A01E6FB98F00FE86A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84FC26AD1E6FE95800FE86A9 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		84FC26AE1E6FE95800FE86A9 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		84FC26AF1E6FE95800FE86A9 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		84FC26B01E6FE95800FE86A9 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 		84FC266A1E6FB98E00FE86A9 = {
 			isa = PBXGroup;
 			children = (
+				84FC26AC1E6FE95800FE86A9 /* socket */,
 				84FC26751E6FB98E00FE86A9 /* FMTCPSockectClient */,
 				84FC26921E6FB98F00FE86A9 /* FMTCPSockectClientTests */,
 				84FC269D1E6FB98F00FE86A9 /* FMTCPSockectClientUITests */,
@@ -141,6 +148,17 @@
 				84FC26A01E6FB98F00FE86A9 /* Info.plist */,
 			);
 			path = FMTCPSockectClientUITests;
+			sourceTree = "<group>";
+		};
+		84FC26AC1E6FE95800FE86A9 /* socket */ = {
+			isa = PBXGroup;
+			children = (
+				84FC26AD1E6FE95800FE86A9 /* AsyncSocket.h */,
+				84FC26AE1E6FE95800FE86A9 /* AsyncSocket.m */,
+				84FC26AF1E6FE95800FE86A9 /* AsyncUdpSocket.h */,
+				84FC26B01E6FE95800FE86A9 /* AsyncUdpSocket.m */,
+			);
+			path = socket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,15 +228,18 @@
 				TargetAttributes = {
 					84FC26721E6FB98E00FE86A9 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 538CZ4N2AQ;
 						ProvisioningStyle = Automatic;
 					};
 					84FC268E1E6FB98F00FE86A9 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 538CZ4N2AQ;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 84FC26721E6FB98E00FE86A9;
 					};
 					84FC26991E6FB98F00FE86A9 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 538CZ4N2AQ;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 84FC26721E6FB98E00FE86A9;
 					};
@@ -277,7 +298,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				84FC26841E6FB98F00FE86A9 /* FMTCPSockectClient.xcdatamodeld in Sources */,
+				84FC26B11E6FE95800FE86A9 /* AsyncSocket.m in Sources */,
 				84FC267E1E6FB98E00FE86A9 /* ViewController.m in Sources */,
+				84FC26B21E6FE95800FE86A9 /* AsyncUdpSocket.m in Sources */,
 				84FC267B1E6FB98E00FE86A9 /* AppDelegate.m in Sources */,
 				84FC26781E6FB98E00FE86A9 /* main.m in Sources */,
 			);
@@ -428,7 +451,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 538CZ4N2AQ;
 				INFOPLIST_FILE = FMTCPSockectClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiemian.FMTCPSockectClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,7 +464,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 538CZ4N2AQ;
 				INFOPLIST_FILE = FMTCPSockectClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiemian.FMTCPSockectClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -450,6 +477,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 538CZ4N2AQ;
 				INFOPLIST_FILE = FMTCPSockectClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiemian.FMTCPSockectClientTests;
@@ -462,6 +490,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 538CZ4N2AQ;
 				INFOPLIST_FILE = FMTCPSockectClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiemian.FMTCPSockectClientTests;
@@ -473,6 +502,7 @@
 		84FC26AA1E6FB98F00FE86A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 538CZ4N2AQ;
 				INFOPLIST_FILE = FMTCPSockectClientUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiemian.FMTCPSockectClientUITests;
@@ -484,6 +514,7 @@
 		84FC26AB1E6FB98F00FE86A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 538CZ4N2AQ;
 				INFOPLIST_FILE = FMTCPSockectClientUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiemian.FMTCPSockectClientUITests;
@@ -511,6 +542,7 @@
 				84FC26A51E6FB98F00FE86A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84FC26A61E6FB98F00FE86A9 /* Build configuration list for PBXNativeTarget "FMTCPSockectClientTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +551,7 @@
 				84FC26A81E6FB98F00FE86A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84FC26A91E6FB98F00FE86A9 /* Build configuration list for PBXNativeTarget "FMTCPSockectClientUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +560,7 @@
 				84FC26AB1E6FB98F00FE86A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
